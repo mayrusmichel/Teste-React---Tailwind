@@ -4,7 +4,7 @@ import './home.css';
 
 export function Home() {
     return (
-        <div className='text-white'>
+        <div className=''>
            <Header/>
            <SideMenu />
         </div>
