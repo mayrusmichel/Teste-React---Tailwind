@@ -20,10 +20,11 @@
       [ X ]  - Criar pasta Api
       [ X ]  - Criar pasta Services
         
-[ ] -
-[ ] -
-[ ] -
-[ ] -
+[ ] - Items menu pai
+[ ] - Items menu filhos
+[ ] - Rederizacao menu organizado
+[ ] - Abertura e fechamento de items 
+[ ] - 
 
 ## Extras
 [ ] - Implementar funcionalidade de busca para filtrar locais por nome.
