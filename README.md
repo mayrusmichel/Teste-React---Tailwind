@@ -11,14 +11,14 @@
 ## ToDo
 [ X ] - Criar projeto em React + Typescript + Vite e instalar as dependencias (npm install)
 [ X ] - Instalar biblioteca de components - Boostrap 
+[ X ]  - Realizar commit inicial no Github
 
 [ ] - Limpar e estruturar as pastas do projeto
-      [ ]  - Deletar o que estiver 'sobrando' do projeto inicial
-      [ ]  - Criar pasta Components
-      [ ]  - Criar pasta Pages
-      [ ]  - Criar pasta Api
-      [ ]  - Services
-      [ ]  - Realizar commit inicial no Github
+      [ X ]  - Deletar o que estiver 'sobrando' do projeto inicial
+      [ X ]  - Criar pasta Components
+      [ X ]  - Criar pasta Pages
+      [ X ]  - Criar pasta Api
+      [ X ]  - Criar pasta Services
         
 [ ] -
 [ ] -
