@@ -4,11 +4,11 @@ import { dadosMenu } from "../../api/dados-menu";
 import { organizeMenuData } from "./utils/organizeMenuData";
 import { Content } from "../content/content";
 
-// import "primereact/resources/themes/saga-blue/theme.css";
-// import "primereact/resources/primereact.min.css";
-// import "primeicons/primeicons.css";   
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";   
 
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export function SideMenu() {
   const [data, setData] = useState([]);
@@ -47,7 +47,7 @@ export function SideMenu() {
 />
 
       <div className="row ">
-        <nav className="col-md-3 col-lg-3 ">
+        <nav className="col-md-3 col-lg-4 ">
           <div className="">
             <Tree
               value={data}
