@@ -41,7 +41,7 @@ export function SideMenu() {
     <div className="container-fluid mt-5 ">
 <img 
   className="icon mb-3" 
-  src="/src/assets/images/favicon.svg" 
+  src="/public/images/favicon.svg" 
   alt="" 
   style={{ width: '40px', height: '40px' }} 
 />
