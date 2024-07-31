@@ -6,7 +6,8 @@ import { Content } from "../content/content";
 
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
+import "primeicons/primeicons.css";   
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export function SideMenu() {
@@ -31,8 +32,11 @@ export function SideMenu() {
     const node = event.node;
     setSelectedItem(node);
     setSelectedNodeKey(node.key);
-  };
 
+    // Expand only the direct parent of the selected node
+    const parentKey = node.parent ? node.parent.key : null;
+    setExpandedKeys({ [parentKey]: true });
+  };
   return (
     <div className="container-fluid mt-5 ">
 <img 
@@ -58,7 +62,7 @@ export function SideMenu() {
               filterPlaceholder="Buscar no menu"
               className="w-full md:w-30rem text-white"
               filterValue={filterValue}
-              onFilterValueChange={(e) => setFilterValue(e.value)} // Atualiza o valor do filtro
+              onFilterValueChange={(e) => setFilterValue(e.value)} 
             />
           </div>
         </nav>
