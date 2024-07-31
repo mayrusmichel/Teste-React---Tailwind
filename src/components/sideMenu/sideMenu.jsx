@@ -6,13 +6,16 @@ import { Content } from "../content/content";
 
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
+import "primeicons/primeicons.css";   
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export function SideMenu() {
   const [data, setData] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [filterValue, setFilterValue] = useState(""); 
+  const [expandedKeys, setExpandedKeys] = useState({});
+  const [selectedNodeKey, setSelectedNodeKey] = useState(null);
+  const [filterValue, setFilterValue] = useState(""); // Filtro inicializado como string vazia
 
   // Fetch data and set initial state
   useEffect(() => {
@@ -24,28 +27,42 @@ export function SideMenu() {
     fetchData();
   }, []);
 
+  // Handle node selection
+  const handleNodeSelect = (event) => {
+    const node = event.node;
+    setSelectedItem(node);
+    setSelectedNodeKey(node.key);
 
+    // Expand only the direct parent of the selected node
+    const parentKey = node.parent ? node.parent.key : null;
+    setExpandedKeys({ [parentKey]: true });
+  };
   return (
     <div className="container-fluid mt-5 ">
-      <img
-        className="icon mb-3"
-        src="/public/images/favicon.svg"
-        alt="logo"
-        style={{ width: "40px", height: "40px" }}
-      />
+<img 
+  className="icon mb-3" 
+  src="/public/images/favicon.svg" 
+  alt="logo" 
+  style={{ width: '40px', height: '40px' }} 
+/>
 
-      <div className="row  ">
-        <nav className="col-md-3 col-lg-4 h-100 ">
-          <div className="border">
+      <div className="row ">
+        <nav className="col-md-3 col-lg-4 ">
+          <div className="">
             <Tree
               value={data}
+              expandedKeys={expandedKeys}
+              onToggle={(e) => setExpandedKeys(e.value)}
               selectionMode="single"
+              selectionKeys={selectedNodeKey ? { [selectedNodeKey]: true } : {}}
+              onSelectionChange={(e) => setSelectedNodeKey(e.value)}
+              onSelect={handleNodeSelect}
               filter
               filterMode="lenient"
               filterPlaceholder="Buscar no menu"
               className="w-full md:w-30rem text-white"
               filterValue={filterValue}
-              onFilterValueChange={(e) => setFilterValue(e.value)}
+              onFilterValueChange={(e) => setFilterValue(e.value)} 
             />
           </div>
         </nav>

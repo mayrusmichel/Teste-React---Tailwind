@@ -22,5 +22,6 @@ export function organizeMenuData(items) {
     rootItems.sort((a, b) => a.id - b.id);
     rootItems.forEach(sortItems);
 
+    console.log(rootItems)
     return rootItems;
 }
