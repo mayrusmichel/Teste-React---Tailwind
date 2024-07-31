@@ -4,11 +4,11 @@ import { dadosMenu } from "../../api/dados-menu";
 import { organizeMenuData } from "./utils/organizeMenuData";
 import { Content } from "../content/content";
 
-import "primereact/resources/themes/saga-blue/theme.css";
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";   
+// import "primereact/resources/themes/saga-blue/theme.css";
+// import "primereact/resources/primereact.min.css";
+// import "primeicons/primeicons.css";   
 
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 export function SideMenu() {
   const [data, setData] = useState([]);
@@ -42,7 +42,7 @@ export function SideMenu() {
 <img 
   className="icon mb-3" 
   src="/public/images/favicon.svg" 
-  alt="" 
+  alt="logo" 
   style={{ width: '40px', height: '40px' }} 
 />
 
