@@ -1,11 +1,12 @@
-import "./styles.css";
+import React from 'react';
 
-export function Header() {
+export function Header({ title }) {
   return (
-    <>
-      <div className="header bg-primary text-white d-flex align-items-center justify-content-center">
-        <h1 className="fs-4 bg-primary m-2">Screening Test</h1>
-      </div>
-    </>
+    <div 
+      className="header text-white d-flex align-items-center justify-content-center"
+      style={{ backgroundColor: '#14b8b8' }}
+    >
+      <h1 className="fs-4 bg-transparent m-2">{title}</h1>
+    </div>
   );
 }

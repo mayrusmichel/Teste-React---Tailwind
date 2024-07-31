@@ -5,7 +5,7 @@ export function Content({ item }) {
 
     return (
         <div>
-            <h1>{item.label}</h1> 
+            <h2>{item.label}</h2> 
             <p>{item.description}</p>
         </div>
     );

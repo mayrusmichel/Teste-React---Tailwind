@@ -1,0 +1,10 @@
+/* Container específico para a página Home */
+.container {
+    max-width: 1280px;
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 15px; /* Adiciona padding horizontal para espaçamento */
+  }
+
+  .icon{
+    max-width:2rem;
+}
