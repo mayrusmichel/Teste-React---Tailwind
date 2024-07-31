@@ -18,8 +18,8 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
 ## Configuração do Projeto
 
-### 1. Clonando o Repositório
 
+### 1. Clonando o Repositório
 Se você ainda não clonou o repositório, use o seguinte comando:
 
 ```bash
@@ -29,8 +29,6 @@ cd screening2
 ### 2. Instalando Dependências
 Instale as dependências do projeto usando npm ou Yarn:
 npm install
-
-
 
 
 ### 3. Executando o projeto
